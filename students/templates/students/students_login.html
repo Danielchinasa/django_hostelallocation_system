@@ -1,0 +1,32 @@
+{% extends "base_auth_layout.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+    
+        <div class="row mt-5">
+            <div class="col-sm"> </div>
+            <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center">Student Login</h4>
+                </div>
+                 <div class="card-body" style="padding:10px">
+                <form class="form" method="POST" action="/students/login/">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{form|crispy}}
+                    </div>
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn btn-info" id="exampleInputPassword1" value="SignIn to Portal">
+                        </div>
+                </form>
+                <p class="text-center">Don't have an Account? <br><strong><a href="#">Register Now</a></strong></p>
+                </div>
+            </div>
+                    
+            </div>
+            <div class="col-sm"> </div>
+        </div>
+        
+    </div>
+{% endblock content %}

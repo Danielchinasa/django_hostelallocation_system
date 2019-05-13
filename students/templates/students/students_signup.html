@@ -1,0 +1,29 @@
+{% extends "base_auth_layout.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+    
+        <div class="row mt-3">
+            <div class="col-sm"> </div>
+            <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center">Student Registration</h4>
+                </div>
+                 <div class="card-body" style="padding:10px">
+                <form class="form" method="POST" action="/students/signup/">
+                    {% csrf_token %}
+                        {{form|crispy}}
+
+                        <input type="submit" value="Sign Up"  class="btn btn-primary btn-block"/>
+                </form>
+                <p class="text-center">Already have an Account? <br><strong><a href="#">Sign In</a></strong></p>
+                </div>
+            </div>
+                    
+            </div>
+            <div class="col-sm"> </div>
+        </div>
+        
+    </div>
+{% endblock content %}
