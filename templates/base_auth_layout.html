@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hostel Allocation</title>
+     {% load staticfiles %}
+    <link rel="stylesheet" href=" {% static '/students/css/bootstrap.min.css' %} " type="text/css"/>
+    <link rel="stylesheet" href=" {% static '/students/css/style.css' %} " type="text/css"/>
+    <script src=" {% static '/students/js/bootstrap.min.js' %} " type="text/javascript"/></script>
+</head>
+<body>
+   
+    {% block content %}
+    
+    {% endblock content %}
+<footer>
+		
+        <div class="small-print">
+        	<div class="container">
+        		<p><a href="/">Home</a> | <a href="#">Staff</a> | <a href="#">Contact</a></p>
+        		<p>Copyright &copy; Example.com 2019 </p>
+        	</div>
+        </div>
+</footer>
+
+    
+    {% comment %} Footer Scripts {% endcomment %}
+    <script src="{% static '/students/js/jquery-1.11.3.min.js' %} "></script>
+    <script src="{% static '/students/js/bootstrap.min.js' %} "></script>
+    <script src="{% static '/students/js/holder.min.js' %} "></script>
+    {% comment %} End of Footer Scripts {% endcomment %}
+</body>
+</html>
